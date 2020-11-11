@@ -109,8 +109,16 @@ const ironMan = new Car('HotRod', 10);
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+function Baby(name, age, favoriteToy) {
+  this.name = name;
+  this.age = age;
+  this.favoriteToy = favoriteToy;
+}
+const baby = new Baby('Jack', 1, 'Train');
+const babyTwo = new Baby('Jill', 2, 'WindMill');
 
+Baby.prototype.play = function(){
+  return(`Playing with ${this.favoriteToy}, ${this.favoriteToy} being the favorite toy`);
 }
 
 /* 
