@@ -63,9 +63,9 @@ const personOne = new Person('Jakobi', 20);
 const personTwo = new Person('Leah', 29);
 const personThree = new Person('Karla', 24);
 
-console.log(personOne.toString());
-console.log(personTwo.toString());
-console.log(personThree.toString());
+// console.log(personOne.toString());
+// console.log(personTwo.toString());
+// console.log(personThree.toString());
 
 // personOne.eat('taco');
 // personOne.eat('pizza');
@@ -92,8 +92,15 @@ console.log(personThree.toString());
 */
 
 function Car(model, milesPerGallon) {
-
+  this.model = model;
+  this.milesPerGallon = milesPerGallon;
+  this.tank = 0;
+  this.odometer = 0;
 }
+Car.prototype.fill = function(gallons){
+  this.tank = (this.tank + gallons);
+}
+const ironMan = new Car('HotRod', 10);
 
 /*
   TASK 3
